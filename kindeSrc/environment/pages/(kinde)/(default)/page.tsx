@@ -192,8 +192,8 @@ const Layout = async ({ request, context }: KindePageEvent) => {
                 </div>
                 <h2>{context.widget.content.heading}</h2>
                 <p>{context.widget.content.description}</p>
-                <main>{getKindeWidget()}</main>
               </div>
+              <main>{getKindeWidget()}</main>
             </div>
           </div>
         </div>
