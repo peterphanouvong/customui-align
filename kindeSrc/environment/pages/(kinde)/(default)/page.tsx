@@ -8,6 +8,7 @@ import {
   getKindeCSRF,
   getKindeWidget,
   KindePageEvent,
+  getLogoUrl,
 } from "@kinde/infrastructure";
 
 import { renderToString } from "react-dom/server.browser";
@@ -88,6 +89,11 @@ const Layout = async ({ request, context }: KindePageEvent) => {
         <div id="root" data-roast-root="/admin">
           <div className="login">
             <div className="login-header">
+              <img
+                className="c-header"
+                src={getLogoUrl()}
+                alt={context.widget.content.logo_alt}
+              />
               <h2>{context.widget.content.heading}</h2>
               <p>{context.widget.content.description}</p>
             </div>
