@@ -21,6 +21,8 @@ export const pageSettings = {
 };
 
 const Layout = async ({ request, context }: KindePageEvent) => {
+  console.log("request", request);
+  console.log("context", context);
   return (
     <html lang={request.locale.lang}>
       <head>
