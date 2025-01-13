@@ -32,7 +32,11 @@ const Layout = async ({ request, context }: KindePageEvent) => {
         {getKindeRequiredCSS()}
         {getKindeRequiredJS()}
         <style>{`
-       
+        :root {
+        --kinde-base-font-family: -apple-system, system-ui,
+                BlinkMacSystemFont, Helvetica, Arial, Segoe UI, Roboto,
+                sans-serif;
+        }
         `}</style>
       </head>
       <body>
