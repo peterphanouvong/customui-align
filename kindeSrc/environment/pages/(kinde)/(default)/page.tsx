@@ -51,6 +51,7 @@ const Layout = async ({ request, context }: KindePageEvent) => {
   background-color: #f8f9fa;
   overflow: hidden;
   z-index: -1;
+   pointer-events: none;
 }
 
 .background__before {
@@ -80,6 +81,7 @@ const Layout = async ({ request, context }: KindePageEvent) => {
     transparent 70%
   );
   z-index: -1;
+  pointer-events: none;
 }
 
 .background__after {
