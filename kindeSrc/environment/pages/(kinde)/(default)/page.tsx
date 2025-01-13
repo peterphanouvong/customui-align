@@ -53,7 +53,7 @@ const Layout = async ({ request, context }: KindePageEvent) => {
   z-index: -1;
 }
 
-.background::before {
+.background__before {
   content: "";
   position: absolute;
   top: 0;
@@ -82,7 +82,7 @@ const Layout = async ({ request, context }: KindePageEvent) => {
   z-index: -1;
 }
 
-.background::after {
+.background__after {
   content: "";
   position: absolute;
   top: 50%;
@@ -177,6 +177,8 @@ const Layout = async ({ request, context }: KindePageEvent) => {
       <body>
         <div id="root" data-roast-root="/admin">
           <div className="background">
+            <div className="background__before"></div>
+            <div className="background__after"></div>
             <div className="login">
               <div className="login-header">
                 <div className="login-header__logo-wrapper">
