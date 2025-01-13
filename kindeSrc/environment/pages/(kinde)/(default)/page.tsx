@@ -34,11 +34,54 @@ const Layout = async ({ request, context }: KindePageEvent) => {
         {getKindeRequiredCSS()}
         {getKindeRequiredJS()}
         <style>{`
-        :root {
-        --kinde-base-font-family: -apple-system, system-ui,
-                BlinkMacSystemFont, Helvetica, Arial, Segoe UI, Roboto,
-                sans-serif;
-        }
+:root {
+  --kinde-base-font-family: -apple-system, system-ui, BlinkMacSystemFont,
+    Helvetica, Arial, Segoe UI, Roboto, sans-serif;
+  --kinde-control-select-text-border-radius: 8px;
+  --kinde-button-primary-background-color: #272a2c;
+  --kinde-button-primary-color: white;
+  --kinde-button-border-radius: 8px;
+}
+
+.login {
+  padding: 2rem;
+}
+.login-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.login-header h2 {
+  font-weight: 600;
+}
+
+.kinde-button-variant-secondary {
+  border-radius: 8px;
+  background-color: white;
+  border: 1px solid #e9edec;
+}
+
+.kinde-choice-separator {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.kinde-choice-separator::before,
+.kinde-choice-separator::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+}
+
+.kinde-choice-separator::before {
+  margin-right: 15px;
+}
+
+.kinde-choice-separator::after {
+  margin-left: 15px;
+}
         `}</style>
       </head>
       <body>
