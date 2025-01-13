@@ -179,7 +179,6 @@ const Layout = async ({ request, context }: KindePageEvent) => {
       <body>
         <div id="root" data-roast-root="/admin">
           <div className="background">
-            <div className="background__before"></div>
             <div className="login">
               <div className="login-header">
                 <div className="login-header__logo-wrapper">
