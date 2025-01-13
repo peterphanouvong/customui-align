@@ -181,7 +181,7 @@ body::after {
                 <div class="grid-layer"></div>
                 <div class="glow-layer"></div>
                 <img
-                  className="c-header"
+                  className="login-header__logo"
                   src={getLogoUrl()}
                   alt={context.widget.content.logo_alt}
                 />
