@@ -181,8 +181,6 @@ const Layout = async ({ request, context }: KindePageEvent) => {
             <div className="login">
               <div className="login-header">
                 <div className="login-header__logo-wrapper">
-                  <div className="grid-layer"></div>
-                  <div className="glow-layer"></div>
                   <img
                     className="login-header__logo"
                     src={getLogoUrl()}
