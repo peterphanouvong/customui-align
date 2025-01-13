@@ -177,11 +177,16 @@ body::after {
         <div id="root" data-roast-root="/admin">
           <div className="login">
             <div className="login-header">
-              <img
-                className="c-header"
-                src={getLogoUrl()}
-                alt={context.widget.content.logo_alt}
-              />
+              <div className="login-header__logo-wrapper">
+                <div class="grid-layer"></div>
+                <div class="glow-layer"></div>
+                <img
+                  className="c-header"
+                  src={getLogoUrl()}
+                  alt={context.widget.content.logo_alt}
+                />
+              </div>
+
               <h2>{context.widget.content.heading}</h2>
               <p>{context.widget.content.description}</p>
             </div>
