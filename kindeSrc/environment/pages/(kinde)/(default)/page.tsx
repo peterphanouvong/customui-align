@@ -43,6 +43,8 @@ const Layout = async ({ request, context }: KindePageEvent) => {
       </head>
       <body>
         <div id="root" data-roast-root="/admin">
+          <h2>{context.widget.content.heading}</h2>
+          <p>{context.widget.content.description}</p>
           <main>{getKindeWidget()}</main>
           <div>
             <button className="button">
