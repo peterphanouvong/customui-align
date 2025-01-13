@@ -44,15 +44,16 @@ const Layout = async ({ request, context }: KindePageEvent) => {
   --kinde-button-border-radius: 8px;
 }
 
-body {
-  position: relative;
+.background {
+  position: absolute;
   min-height: 100vh;
   width: 100%;
   background-color: #f8f9fa;
   overflow: hidden;
+  z-index: -1;
 }
 
-body::before {
+.background::before {
   content: "";
   position: absolute;
   top: 0;
@@ -81,7 +82,7 @@ body::before {
   z-index: -1;
 }
 
-body::after {
+.background::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -171,26 +172,29 @@ body::after {
   margin-left: 15px;
 }
 
+
         `}</style>
       </head>
       <body>
         <div id="root" data-roast-root="/admin">
-          <div className="login">
-            <div className="login-header">
-              <div className="login-header__logo-wrapper">
-                <div class="grid-layer"></div>
-                <div class="glow-layer"></div>
-                <img
-                  className="login-header__logo"
-                  src={getLogoUrl()}
-                  alt={context.widget.content.logo_alt}
-                />
-              </div>
+          <div className="background">
+            <div className="login">
+              <div className="login-header">
+                <div className="login-header__logo-wrapper">
+                  <div class="grid-layer"></div>
+                  <div class="glow-layer"></div>
+                  <img
+                    className="login-header__logo"
+                    src={getLogoUrl()}
+                    alt={context.widget.content.logo_alt}
+                  />
+                </div>
 
-              <h2>{context.widget.content.heading}</h2>
-              <p>{context.widget.content.description}</p>
+                <h2>{context.widget.content.heading}</h2>
+                <p>{context.widget.content.description}</p>
+              </div>
+              <main>{getKindeWidget()}</main>
             </div>
-            <main>{getKindeWidget()}</main>
           </div>
         </div>
       </body>
