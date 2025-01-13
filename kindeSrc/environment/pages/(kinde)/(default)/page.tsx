@@ -44,16 +44,15 @@ const Layout = async ({ request, context }: KindePageEvent) => {
   --kinde-button-border-radius: 8px;
 }
 
-.background {
-  position: absolute;
+body {
+  position: relative;
   min-height: 100vh;
   width: 100%;
   background-color: #f8f9fa;
   overflow: hidden;
-  z-index: -1;
 }
 
-.background::before {
+body::before {
   content: "";
   position: absolute;
   top: 0;
@@ -82,7 +81,7 @@ const Layout = async ({ request, context }: KindePageEvent) => {
   z-index: -1;
 }
 
-.background::after {
+body::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -172,27 +171,21 @@ const Layout = async ({ request, context }: KindePageEvent) => {
   margin-left: 15px;
 }
 
-
         `}</style>
       </head>
       <body>
         <div id="root" data-roast-root="/admin">
-          <div className="background">
-            <div className="login">
-              <div className="login-header">
-                <div className="login-header__logo-wrapper">
-                  <img
-                    className="login-header__logo"
-                    src={getLogoUrl()}
-                    alt={context.widget.content.logo_alt}
-                  />
-                </div>
-
-                <h2>{context.widget.content.heading}</h2>
-                <p>{context.widget.content.description}</p>
-              </div>
-              <main>{getKindeWidget()}</main>
+          <div className="login">
+            <div className="login-header">
+              <img
+                className="c-header"
+                src={getLogoUrl()}
+                alt={context.widget.content.logo_alt}
+              />
+              <h2>{context.widget.content.heading}</h2>
+              <p>{context.widget.content.description}</p>
             </div>
+            <main>{getKindeWidget()}</main>
           </div>
         </div>
       </body>
