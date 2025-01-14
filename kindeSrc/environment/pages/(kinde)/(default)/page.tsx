@@ -191,6 +191,10 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
           .kinde-choice-separator::after {
             margin-left: 15px;
           }
+
+          [data-kinde-control-label] {
+            display: none;
+          }
         `}</style>
       </head>
       <body>
@@ -209,8 +213,8 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
           nonce={getKindeNonce()}
           dangerouslySetInnerHTML={{
             __html: `
-            console.log('Hello from script');
-            // Your script code here
+            const emailInput = document.querySelector('#sign_up_sign_in_credentials_p_email');
+            emailInput.placeholder = 'Enter your email';
           `,
           }}
         />
