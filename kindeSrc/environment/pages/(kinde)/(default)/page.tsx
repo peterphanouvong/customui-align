@@ -205,7 +205,15 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
             <main>{getKindeWidget()}</main>
           </div>
         </div>
-        <script nonce={getKindeNonce()}>console.log({log})</script>
+        <script
+          nonce={getKindeNonce()}
+          dangerouslySetInnerHTML={{
+            __html: `
+            console.log('Hello from script');
+            // Your script code here
+          `,
+          }}
+        />
       </body>
     </html>
   );
