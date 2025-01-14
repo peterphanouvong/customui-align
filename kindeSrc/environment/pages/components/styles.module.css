@@ -1,0 +1,101 @@
+// styles.module.css
+.auth {
+  --kinde-base-font-family: -apple-system, system-ui, BlinkMacSystemFont,
+    Helvetica, Arial, Segoe UI, Roboto, sans-serif;
+  --kinde-control-select-text-border-radius: 8px;
+  --kinde-button-primary-background-color: #272a2c;
+  --kinde-button-primary-color: white;
+  --kinde-button-border-radius: 8px;
+}
+
+.auth__background {
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f8f9fa;
+  overflow: hidden;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.auth__background-grid {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.9) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(
+    circle at center,
+    black 0%,
+    black 30%,
+    transparent 70%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    black 0%,
+    black 30%,
+    transparent 70%
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+.auth__background-glow {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1600px;
+  height: 1600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 99, 99, 0.08) 0%,
+    rgba(255, 99, 99, 0.03) 35%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: -1;
+}
+
+.auth__container {
+  padding: 0.5rem 2rem 2rem;
+  margin: 5rem auto 0;
+  border-radius: 1rem;
+  background-color: white;
+  max-width: 450px;
+}
+
+.auth__header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth__logo-wrapper {
+  width: 100%;
+  display: flex;
+  padding: 1rem 0 2rem;
+  justify-content: center;
+  background-color: rgba(255, 99, 99, 0.1);
+  background-image: linear-gradient(
+      rgba(255, 99, 99, 0.3) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 99, 99, 0.3) 1px, transparent 1px);
+  background-size: 36px 36px;
+  background-position: 0 24px;
+  mask-image: radial-gradient(circle at top, black 0%, transparent 70%);
+}
+
+.auth__logo {
+  width: 4rem;
+  margin-bottom: 1rem;
+}
+
+.auth__heading {
+  font-weight: 600;
+}
