@@ -9,6 +9,7 @@ import {
   getKindeWidget,
   getLogoUrl,
   type KindePageEvent,
+  getKindeNonce,
 } from "@kinde/infrastructure";
 
 // Types
@@ -137,14 +138,14 @@ const Background: React.FC = () => (
   </div>
 );
 
-const LoginHeader: React.FC<LoginHeaderProps> = ({ heading, description }) => (
+const LoginHeader: React.FC<LoginHeaderProps> = ({
+  heading,
+  description,
+  logoAlt,
+}) => (
   <div style={styles.authHeader.root}>
     <div style={styles.authHeader.logoWrapper}>
-      <img
-        style={styles.authHeader.logo}
-        src={getLogoUrl()}
-        alt="Company logo"
-      />
+      <img style={styles.authHeader.logo} src={getLogoUrl()} alt={logoAlt} />
     </div>
     <h2 style={styles.authHeader.heading}>{heading}</h2>
     <p>{description}</p>
@@ -192,16 +193,20 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
         `}</style>
       </head>
       <body>
-        <div id="root" data-roast-root="/admin">
+        <div data-roast-root="true">
           <Background />
           <div style={styles.authContainer}>
             <LoginHeader
               heading={context.widget.content.heading}
               description={context.widget.content.description}
+              logoAlt={context.widget.content.logoAlt}
             />
             <main>{getKindeWidget()}</main>
           </div>
         </div>
+        <script nonce={getKindeNonce()}>
+          console.log("Hello from Kinde!");
+        </script>
       </body>
     </html>
   );
