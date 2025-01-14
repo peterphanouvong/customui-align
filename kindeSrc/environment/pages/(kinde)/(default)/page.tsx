@@ -172,7 +172,7 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
         `}</style>
       </head>
       <body>
-        <div id="root" data-roast-root="/admin" style={styles.auth}>
+        <div id="root" data-roast-root="/admin">
           <Background />
           <div style={styles.authContainer}>
             <LoginHeader
