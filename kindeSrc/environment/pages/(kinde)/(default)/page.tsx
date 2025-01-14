@@ -60,7 +60,6 @@ const styles = {
     root: {
       position: "absolute" as const,
       minHeight: "100vh",
-      paddingTop: "5rem",
       width: "100%",
       backgroundColor: "#f8f9fa",
       overflow: "hidden",
@@ -95,6 +94,8 @@ const styles = {
   // Main container
   authContainer: {
     padding: "0.5rem 2rem 2rem",
+    position: "relative" as const,
+    top: "5rem",
     marginInline: "auto" as const,
     borderRadius: "1rem",
     backgroundColor: "white",
