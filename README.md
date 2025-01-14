@@ -78,11 +78,6 @@ We welcome contributions! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## Additional Resources
-
-- [Kinde Custom UI Documentation](https://kinde.com/docs)
-- [Custom UI Video Demos](https://www.loom.com/share/folder/4398af02bbde4f498952ab4654a331a3)
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -92,6 +87,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Need help? Here are some resources:
 
 - Check out the [video demos](https://www.loom.com/share/folder/4398af02bbde4f498952ab4654a331a3) for implementation examples
-- Join the [Kinde Community](https://kinde.com/community)
+- Join the [Kinde Community](https://community.kinde.com)
 - Open an issue on GitHub
-- Review the [Kinde documentation](https://kinde.com/docs)
+- Review the [Kinde documentation](https://docs.kinde.com)
