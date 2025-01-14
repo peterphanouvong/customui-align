@@ -153,6 +153,7 @@ const LoginHeader: React.FC<LoginHeaderProps> = ({
 );
 
 const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
+  const log = "Hello world!";
   return (
     <html lang={request.locale.lang}>
       <head>
@@ -204,9 +205,7 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
             <main>{getKindeWidget()}</main>
           </div>
         </div>
-        <script nonce={getKindeNonce()}>
-          console.log("Hello from Kinde!");
-        </script>
+        <script nonce={getKindeNonce()}>console.log(log);</script>
       </body>
     </html>
   );
