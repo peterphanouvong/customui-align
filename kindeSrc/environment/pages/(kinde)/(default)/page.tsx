@@ -205,7 +205,7 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
             <main>{getKindeWidget()}</main>
           </div>
         </div>
-        <script nonce={getKindeNonce()}>console.log(log);</script>
+        <script nonce={getKindeNonce()}>console.log({log})</script>
       </body>
     </html>
   );
