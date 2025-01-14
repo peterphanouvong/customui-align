@@ -169,11 +169,15 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
             --kinde-button-primary-background-color: #272a2c;
             --kinde-button-primary-color: white;
             --kinde-button-border-radius: 8px;
+            --kinde-button-secondary-background-color: #fff;
+            --kinde-button-secondary-border-width: 1px;
+            --kinde-button-secondary-border-color: #e9edec;
+            --kinde-button-secondary-border-style: solid;
           }
 
           .kinde-choice-separator::before,
           .kinde-choice-separator::after {
-            content: "";
+            content: '';
             flex: 1;
             border-bottom: 1px solid #ccc;
           }
