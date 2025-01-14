@@ -170,6 +170,12 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
             --kinde-button-primary-color: white;
             --kinde-button-border-radius: 8px;
           }
+
+          .kinde-button-variant-secondary {
+            border-radius: 8px;
+            background-color: white;
+            border: 1px solid #e9edec;
+          }
         `}</style>
       </head>
       <body>
