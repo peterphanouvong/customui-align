@@ -177,10 +177,10 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
             --kinde-button-secondary-border-style: solid;
           }
 
-          data-kinde-choice-separator {
+          [data-kinde-choice-separator] {
             text-transform: uppercase;
           }
-            
+
           [data-kinde-control-label] {
             display: none;
           }
