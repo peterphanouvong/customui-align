@@ -177,21 +177,10 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
             --kinde-button-secondary-border-style: solid;
           }
 
-          .kinde-choice-separator::before,
-          .kinde-choice-separator::after {
-            content: '';
-            flex: 1;
-            border-bottom: 1px solid #ccc;
+          data-kinde-choice-separator {
+            text-transform: uppercase;
           }
-
-          .kinde-choice-separator::before {
-            margin-right: 15px;
-          }
-
-          .kinde-choice-separator::after {
-            margin-left: 15px;
-          }
-
+            
           [data-kinde-control-label] {
             display: none;
           }
@@ -215,6 +204,7 @@ const Layout: React.FC<KindePageEvent> = async ({ request, context }) => {
             __html: `
             const emailInput = document.querySelector('#sign_up_sign_in_credentials_p_email');
             emailInput.placeholder = 'Enter your email';
+
           `,
           }}
         />
