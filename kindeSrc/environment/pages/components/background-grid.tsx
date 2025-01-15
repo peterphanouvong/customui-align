@@ -1,6 +1,6 @@
 "use server";
 
-import { CSSProperties, JSX } from "react";
+import React from "react";
 
 // Constants moved to a separate configuration object
 const GRADIENTS = {
@@ -28,9 +28,9 @@ const GRADIENTS = {
 
 const styles: {
   authBackground: {
-    root: CSSProperties;
-    grid: CSSProperties;
-    glow: CSSProperties;
+    root: React.CSSProperties;
+    grid: React.CSSProperties;
+    glow: React.CSSProperties;
   };
 } = {
   authBackground: {
@@ -69,7 +69,7 @@ const styles: {
   },
 };
 
-export const BackgroundGrid = (): JSX.Element => {
+export const BackgroundGrid = (): React.JSX.Element => {
   return (
     <div style={styles.authBackground.root}>
       <div style={styles.authBackground.grid} />
