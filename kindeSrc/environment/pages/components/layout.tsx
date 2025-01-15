@@ -8,7 +8,7 @@ import {
   type KindePageEvent,
 } from "@kinde/infrastructure";
 import { generateCSSVariables } from "../styles";
-import { JSX } from "react";
+import React from "react";
 
 interface LayoutProps extends KindePageEvent {
   children: React.ReactNode;
@@ -18,7 +18,7 @@ export const Layout = ({
   request,
   context,
   children,
-}: LayoutProps): JSX.Element => {
+}: LayoutProps): React.JSX.Element => {
   const emailInputScript = `
     const emailInput = document.querySelector('#sign_up_sign_in_credentials_p_email');
     emailInput.placeholder = 'Enter your email';
