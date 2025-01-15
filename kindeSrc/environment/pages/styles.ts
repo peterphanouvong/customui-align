@@ -12,7 +12,6 @@ const kindeVariables = {
   buttonSecondaryBorderStyle: "solid",
 } as const;
 
-// Generate CSS custom properties string
 export const generateCSSVariables = (): string => `
   :root {
     --kinde-base-font-family: ${kindeVariables.baseFontFamily};

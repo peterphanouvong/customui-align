@@ -9,7 +9,7 @@ import React from "react";
 import { renderToString } from "react-dom/server.browser";
 import { BackgroundGrid } from "../../components/background-grid";
 import { LoginHeader } from "../../components/login-header";
-import Layout from "../../components/layout";
+import Layout from "../../layout";
 
 const styles: {
   authContainer: React.CSSProperties;

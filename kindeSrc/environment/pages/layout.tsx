@@ -2,13 +2,12 @@
 
 import {
   getKindeCSRF,
-  getKindeNonce,
   getKindeRequiredCSS,
   getKindeRequiredJS,
   type KindePageEvent,
 } from "@kinde/infrastructure";
-import { generateCSSVariables } from "../styles";
 import React from "react";
+import { generateCSSVariables } from "./styles";
 
 interface LayoutProps extends KindePageEvent {
   children: React.ReactNode;
@@ -19,11 +18,6 @@ export const Layout = ({
   context,
   children,
 }: LayoutProps): React.JSX.Element => {
-  const emailInputScript = `
-    const emailInput = document.querySelector('#sign_up_sign_in_credentials_p_email');
-    emailInput.placeholder = 'Enter your email';
-  `;
-
   return (
     <html lang={request.locale.lang}>
       <head>
@@ -38,10 +32,6 @@ export const Layout = ({
       </head>
       <body>
         <div data-roast-root="true">{children}</div>
-        <script
-          nonce={getKindeNonce()}
-          dangerouslySetInnerHTML={{ __html: emailInputScript }}
-        />
       </body>
     </html>
   );
