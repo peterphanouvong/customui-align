@@ -14,11 +14,11 @@ interface LayoutProps extends KindePageEvent {
   children: React.ReactNode;
 }
 
-export const Layout = async ({
+export const Layout = ({
   request,
   context,
   children,
-}: LayoutProps): Promise<JSX.Element> => {
+}: LayoutProps): JSX.Element => {
   const emailInputScript = `
     const emailInput = document.querySelector('#sign_up_sign_in_credentials_p_email');
     emailInput.placeholder = 'Enter your email';
